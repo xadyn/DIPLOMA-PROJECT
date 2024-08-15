@@ -4,4 +4,5 @@
 ![Setoolkit](https://github.com/user-attachments/assets/fcde9ba6-c2ab-4336-aa8e-9d6ae9453977)
 
 2)Ответы на SOC в док файле 
+
 3)Скрипт (можнодорабоать)
