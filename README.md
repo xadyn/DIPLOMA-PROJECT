@@ -6,7 +6,7 @@
 
 Ответы:
 
-[Link to SOC Answers]
+[Link to SOC Answers](https://docs.google.com/document/d/1c1PvcNpa-UTzDevdsNDskxGlJzdrz5fv/edit)
 
 ## Создать скрипт на любом языке, который в информативном виде будет запускать скрипт с установкой:
 
