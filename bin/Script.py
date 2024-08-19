@@ -27,7 +27,7 @@ def display_results(results):
         for scanner, result in results['scans'].items():
             print(f"{scanner}: {result['result']}")
     else:
-        print("No results found or there was an error in the request.")
+        print("Результат")
 
 if __name__ == "__main__":
     url_to_check = input("Введите URL для проверки: ")

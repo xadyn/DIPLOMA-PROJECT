@@ -23,6 +23,48 @@
 
 Ответы:
 
+> [Link to automatization script](bin/Script.py)
+
+```py
+
+import requests
+
+# Замените 'YOUR_API_KEY' вашим фактическим API ключом
+API_KEY = 'c6f262a299ec5d9295326c4dcb29bfe654648fe230b47adaf922da483687cfd7'
+BASE_URL = 'https://www.virustotal.com/vtapi/v2'
+
+def check_url(url):
+    params = {
+        'apikey': API_KEY,
+        'url': url,
+        'resource': url
+    }
+    
+    # Отправляем запрос на проверку URL
+    response = requests.get(f'{BASE_URL}/url/report', params=params)
+    
+    if response.status_code == 200:
+        results = response.json()
+        return results
+    else:
+        return None
+
+def display_results(results):
+    if results and 'positives' in results:
+        print(f"URL: {results['url']}")
+        print(f"Positive detections: {results['positives']} / {results['total']}")
+        for scanner, result in results['scans'].items():
+            print(f"{scanner}: {result['result']}")
+    else:
+        print("Результат")
+
+if __name__ == "__main__":
+    url_to_check = input("Введите URL для проверки: ")
+    results = check_url(url_to_check)
+    display_results(results)
+```
+
+
 ## Вы обнаружили уязвимость [CVE-2021-41773](https://nvd.nist.gov/vuln/detail/CVE-2021-41773) на вашем web сервере
 
 > Вам необходимо создать задачу для IT по её устранению. Что нужно будет сделать специалисту, чтобы исправить эту уязвимость? Напишите plabook для специалиста SOC L1
@@ -40,7 +82,11 @@
 * p.s. Нужно зарегистрироваться в облаке, для получения белого ip
 * Для отправки письма, можете использовать emkei.cz
 
-Ответы:
+Scrinshots:
+![image 1](images/SET.png)
+
+![image 2](images/Setoolkit.png)
+
 
 ## ** Установить SIEM систему (на ваше усмотрение Wazuh, ELK\EFK, cloud splunk)
 
