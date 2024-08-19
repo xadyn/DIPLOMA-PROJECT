@@ -82,7 +82,7 @@ if __name__ == "__main__":
 * p.s. Нужно зарегистрироваться в облаке, для получения белого ip
 * Для отправки письма, можете использовать emkei.cz
 
-Scrinshots:
+Screenshots:
 ![image 1](images/SET.png)
 
 ![image 2](images/Setoolkit.png)
