@@ -1,4 +1,3 @@
-python
 import requests
 
 # Замените 'YOUR_API_KEY' вашим фактическим API ключом
